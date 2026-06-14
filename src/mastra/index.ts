@@ -6,8 +6,7 @@ import { notes } from './mcp/server'
 export const mastra = new Mastra({
   storage: new LibSQLStore({
     id: 'mastra-storage',
-    // stores telemetry, evals, ... into memory storage, if it needs to persist, change to file:../mastra.db
-    url: ':memory:',
+    url: 'file:/Users/IF658094/vector-db/research-assistant/vector.db',
   }),
   logger: new PinoLogger({
     name: 'Mastra',
